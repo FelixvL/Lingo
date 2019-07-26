@@ -22,10 +22,23 @@ class LingoApp{
 			}
 		} 
 
+		int uitkomst = poging1.checken(invoer.charAt(0));
+		System.out.println(uitkomst);
+
 	}
 
 }
 
 class Poging{
 	String woord = "pizza";
+	int checken(char letter){
+		for(int x = 0 ; x < woord.length() ; x++){
+			if(letter == woord.charAt(x)){
+				System.out.println("zit erin");
+				return x;
+			}
+		} 
+
+		return -1;
+	}
 }
